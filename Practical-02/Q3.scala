@@ -10,7 +10,7 @@ object Q3{
     def totalPay(normalHrs: Int, otHrs: Int) = normalPay(normalHrs) + otPay(otHrs)
 
     // Calculate the tax
-    def tax(normalHrs: Int, otHrs: Int) = (normalPay(normalHrs) + otPay(otHrs)) * 0.12
+    def tax(normalHrs: Int, otHrs: Int) = totalPay(normalHrs, otHrs) * 0.12
 
     // Calculate take home salary
     def takeHomeSalary(normalHrs: Int, otHrs: Int) = totalPay(normalHrs, otHrs) - tax(normalHrs, otHrs)
