@@ -11,7 +11,9 @@ object Q1{
         println(s"n % j => ${n%j}")
         println(s"m / j * j => ${m / j * j}")
         println(s"f + 10*5 + g => ${f + 10 * 5 + g}")
-        println(s"++i * n => ${i + 1 * n}")
+
+        i += 1
+        println(s"++i * n => ${i * n}")
     }
 }
 
