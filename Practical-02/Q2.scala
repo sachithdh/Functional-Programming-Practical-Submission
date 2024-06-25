@@ -8,7 +8,7 @@ object Q2{
         
         // - -b * a + c *d - -
         b -= 1
-        println(s"a). ${b* a + c *d}") // Ommit d -1 because what d-- do is just decrease the val of d
+        println(s"a). ${b* a + c *d}")
         d -= 1
 
         // a++
