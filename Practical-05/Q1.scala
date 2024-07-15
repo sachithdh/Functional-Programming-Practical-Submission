@@ -1,6 +1,7 @@
 import scala.io.StdIn._
 import scala.collection.mutable.ListBuffer
 
+// Add new Product
 def getProductList(): ListBuffer[String] = {
     var productNameList = ListBuffer[String]()
     var productName: String = ""
@@ -9,12 +10,11 @@ def getProductList(): ListBuffer[String] = {
         if(productName != "done"){
             productNameList += productName
         }
-
     }
     productNameList
 }
 
-
+// Print current product list
 def printProductList(producttNames: List[String]): Unit = {
     println("\nProduct List:")
     for(i <- 0 to producttNames.length - 1){
@@ -22,6 +22,7 @@ def printProductList(producttNames: List[String]): Unit = {
     }
 }
 
+// Get no. of product
 def getTotalProducts(productNames: List[String]): Int ={
     productNames.length
 }
