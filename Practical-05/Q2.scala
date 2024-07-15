@@ -5,11 +5,12 @@ import scala.collection.mutable.Set
 case class Book(title: String, author: String, isbn: String)
 
 var library: Set[Book] = Set(
-    Book("The Catcher in the Rye", "J.D. Salinger", "978-0-316-76948-0"),
-    Book("To Kill a Mockingbird", "Harper Lee", "978-0-06-112008-4"),
-    Book("1984", "George Orwell", "978-0-452-28423-4")
+    Book("The Dark Season", "John Doe", "978-0-316-76948-0"),
+    Book("Mockingbird", "Marshall B. Mathers", "978-0-06-112008-4"),
+    Book("Light Dreams", "Jack Knight", "978-0-452-28423-4")
 )
 
+// Add new Book
 def addBook(): Unit = {
     val title = readLine("Enter title: ")
     val author = readLine("Enter author name: ")
@@ -21,6 +22,7 @@ def addBook(): Unit = {
     println(s"Book ${title} added to the Library.")
 }
 
+// Remove book by ISBN
 def removeBook(): Unit = {
     val isbn = readLine("Enter ISBN of the book: ")
 
@@ -32,12 +34,13 @@ def removeBook(): Unit = {
     }
 }
 
-
+// Display current book collection of the library
 def displayLibrary(): Unit = {
     println("\nCurrent Library Book Collection:")
     library.foreach(book => println(s"Title: ${book.title}, Author: ${book.author}, ISBN: ${book.isbn}"))
 }
 
+// Search book by title
 def searchBook():Unit ={
     val title = readLine("Enter Book title: ")
 
@@ -47,6 +50,8 @@ def searchBook():Unit ={
     }
 }
 
+
+// Search books by author
 def serchAuthorBook(): Unit = {
     val author = readLine("Enter author name: ")
 
